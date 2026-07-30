@@ -75,4 +75,12 @@ The DVWA database contained a 'users' table with fields including:
   ### Password Hash Assessment
 
   The database contained 32 character password hashes. An md5 test confirmed the format,and john the Ripper successfully recovered the weak password 'password' from the sample hash in the authorized lab environment.
+
+  ## Remediation
+
+  - Upgrade outdated MYSQL software to a supported and secure version.
+  - Use Argon2id, bcrypt, or scrpt instead of MD5 for password storage.
+  - Enforce strong password policies.
+  - Restrict database access to authorized systems and users.
+  - Regularly patch and review exposed services.
   
