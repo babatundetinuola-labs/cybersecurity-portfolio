@@ -52,3 +52,27 @@ Weak password hashing can allow attackers who obtain password hashes to recover 
 ### Recommendation
 
 Use a modern password-hashing algorithm designed for password storage,such as Argon2id,bcrypt, or scrypt, with unique salts for each password. Enforce strong passwotrd policies and protect the database from unauthorized access.
+
+## Evidence
+
+### Nmap service Discvovery
+
+MYSQL was identified as an exposed service:
+
+'3306/tcp open mysql MYSQL 5.0.51a'
+
+### Database Enumeration
+
+The DVWA database contained a 'users' table with fields including:
+
+- 'user-id'
+- 'first_name'
+- 'last_name'
+- 'user'
+- 'password'
+- 'avatar'
+
+  ### Password Hash Assessment
+
+  The database contained 32 character password hashes. An md5 test confirmed the format,and john the Ripper successfully recovered the weak password 'password' from the sample hash in the authorized lab environment.
+  
