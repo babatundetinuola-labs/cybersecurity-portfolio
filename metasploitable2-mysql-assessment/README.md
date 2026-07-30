@@ -37,7 +37,7 @@ Nmap identified MYSQL 5.0.51a running on port 3306.
 
 The DVWA 'users' table stored password values as 32-character MD5 HASHES.
 
-Testing confirmed that the hashe:
+Testing confirmed that the hash:
 
 '5f4dcc3baa765d61d8327deb882cf99'
 
